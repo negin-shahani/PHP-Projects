@@ -1,0 +1,11 @@
+/* import GoogleFont poppins = Poppins is geometric in style, 
+clean, and includes 18 different font weights */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+/*for all elements */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
