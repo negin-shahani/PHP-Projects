@@ -9,3 +9,140 @@ clean, and includes 18 different font weights */
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
+body{
+    display:flex;
+    padding: 0 10px;
+    min-height: 100vh;
+    align-items: center; /*these two lines made the form to be in center*/
+    justify-content: center;
+    background: #B5EAD7;
+}
+.wrapper {
+    width: 720px;
+    background: #E2F0CB;
+    border-radius: 10px;
+}
+
+.wrapper header{
+    font-size: 22px;
+    font-weight: 600;
+    padding: 20px 30px;
+    border-bottom: 2px solid #957DAD;
+}
+.wrapper form{
+    margin: 35px 30px;
+}
+
+.wrapper .feilds{
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+    justify-content: space-between;
+}
+
+.feilds .feild {
+    height: 50px;
+    width: calc(100% /2 - 13px);
+    position: relative;
+}
+
+form .feild input,
+form .message textarea{
+    height: 100%;
+    width: 100%;
+    font-size: 15px;
+    outline: none;
+    padding: 0 15px 0 45px;
+    border-radius: 5%;
+    border: 2px solid #957DAD;
+}
+
+.wrapper form i {
+    position: absolute;
+    font-size: 17px;
+    left: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: #957DAD;
+}
+
+form .feild input::placeholder,
+form .message textarea::placeholder{
+    color: #957DAD;
+}
+
+form .feild input:focus,
+form .message textarea:focus{
+    border: 3px solid black;
+}
+
+form .feild input:focus ~ i,
+form .message textarea:focus ~ i {
+    color: black;
+}
+
+form .message{
+    position: relative;
+}
+
+form .message i{
+    top: 20px;
+    font-size: 22px;
+}
+
+form .message textarea{
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 120px;
+    max-height: 300px;
+    padding: 15px 20px 0 48px;
+}
+
+form .buttons{
+    margin: 25px 0;
+    display: flex;
+    align-items: center;
+}
+
+.buttons button{
+    color: #fff;
+    background: #957DAD;
+    border: none;
+    border-radius: 5%;
+    font-size: 17px;
+    cursor: pointer;
+    padding: 13px 25px;
+}
+
+.buttons span{
+    color: #957DAD;
+    margin: 30px;
+}   
+
+@media(max-width: 600px){
+    .wrapper header{
+        text-align: center;
+    }
+    form .feilds{
+        margin-bottom: 0px;
+        flex-direction: column;
+    }
+    .feilds .feild{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    form .buttons{
+        flex-direction: column;
+    }
+    .buttons button{
+        width: 100%;
+    }
+    .buttons span{
+        text-align: center;
+        margin: 20px 0;
+    }
+    form .message textarea{
+        resize: none;
+    }
+}
