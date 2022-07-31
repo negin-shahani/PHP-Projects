@@ -14,5 +14,7 @@ form.onsubmit = (e) =>{
             console.log(response); 
        } 
     }
-    xml.send();
+    //create new formData obj. This obj is used to send form data.
+    let formData = new FormData(form); 
+    xml.send(formData); //send the formData obj
 }
